@@ -23,12 +23,12 @@ Prodromal_Quality_Data= Prodromal_Quality_Data[match(colnames(Raw_GeneCounts), r
 Raw_GeneCounts=as.data.frame(Raw_GeneCounts)
 
 #Access gene names from Reference Annotation file to subset the Raw_GeneCounts to only contain Protein Coding Genes
-gtf_1= "pathway/reference_annotation"
-gtf_1dat= import(gtf_1)
-gtf_1df= as.data.frame(gtf_1dat)
-gtf_1dat_sub <- gtf_1df %>% select(seqnames, Geneid, gene_name, gene_type)
+gene_annotation= "pathway/reference_annotation"
+gene_annotation_dat= import(gene_annotation)
+gene_annotation_df= as.data.frame(gene_annotation_df)
+gene_annotation_df_sub <- gene_annotation_df %>% select(seqnames, Geneid, gene_name, gene_type)
 
-ProteinCoding_dat= gtf_1dat_sub %>% #Subset the reference file to only contain protein coding genes
+ProteinCoding_dat= gene_annotation_df_sub %>% #Subset the reference file to only contain protein coding genes
   filter(gene_type == "protein_coding")
 
 ProteinCoding_dat <- ProteinCoding_dat %>% select(Geneid, gene_name)
