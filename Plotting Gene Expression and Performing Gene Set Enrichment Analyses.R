@@ -57,7 +57,7 @@ Results_genes$Significance[Results_genes$logFC < -logFC_threshold & Results_gene
 
 color_scheme <- c("Non-significant" = "grey", "Upregulated" = "red", "Downregulated" = "blue")
 
-#Subset for the top 10 significiantly expressed genes for their names to appear on the plot
+#Subset for the top 10 significiantly expressed genes 
 top_genes= rownames(Results_genes[order(Results_genes$adj.P.Val), ][1:10, ])
 
 Results_genes$Gene= rownames(Results_genes)
@@ -82,7 +82,7 @@ volcano_plot <- ggplot(Results_genes, aes(x = logFC, y = -log10(adj.P.Val), colo
 
 print(volcano_plot) 
 
-top_genes= Results_genes[order(Results_genes$adj.P.Val), ][1:10, ]
+top_genes= Results_genes[order(Results_genes$adj.P.Val), ][1:10, ] #Have the names of the top 10 significiantly expressed genes to appear on the plot
 volcano_plot +
   geom_text_repel(data=top_genes, aes(label=Gene), size=2, color="black", fontface="bold", max.overlaps=15, box.padding=1.3, point.padding=1)
 
