@@ -45,7 +45,7 @@ library(org.Hs.eg.db)
 
 #Create Volcano Plot to Visualise Differential Gene Expression
 
-Results_genes= data.frame(read.table("pathway/DataSet", header= TRUE)) #Set DataSet to your gene expression table output
+Results_genes= data.frame(read.table("pathway/DataSet", header= TRUE)) #DataSet = gene expression table output from performing differential gene expression
 
 logFC_threshold <- 0  
 p_value_threshold <- 0.05 
