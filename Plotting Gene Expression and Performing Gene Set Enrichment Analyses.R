@@ -204,3 +204,11 @@ ggplot(DataCombine4_sub, aes(x=NES, y=Description, color=qvalue, size=setSize))+
     axis.title= element_text(size=16, face="bold")
   )
 
+#Package Citations:
+#1.Guangchuang Yu, Li-Gen Wang, Guang-Rong Yan, Qing-Yu He. DOSE: an R/Bioconductor package for Disease Ontology Semantic and Enrichment analysis. Bioinformatics 2015, 31(4):608-609 
+
+#2.Guangchuang Yu, Li-Gen Wang, Yanyan Han and Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287  
+
+#3.using 'fgsea' for GSEA analysis, please cite Korotkevich et al (2019) 
+ 
+#4.Sehyun Oh et al. HGNChelper: identification and correction of invalid gene symbols for human and mouse. F1000Research 2020, 9:1493. DOI: https://doi.org/10.12688/f1000research.28033.1 
